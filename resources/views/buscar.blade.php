@@ -36,7 +36,7 @@
              </div>
              <div>
                <label for="Precio">Precio:</label>
-               <!-- Aquí puedes integrar ion.rangeSlider para seleccionar el rango de precios -->
+               <!-- Aquí puedes integrar ion.rangeSlider para seleccionar el rango de precios utilizando id y name-->
               <input type="text" id="Precio" name="Precio" value="" placeholder="Precio">
              </div>
              <div class="mi-boton">
