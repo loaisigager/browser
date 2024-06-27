@@ -1,0 +1,144 @@
+
+html, body {
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .container{
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: nowrap;
+
+
+  }
+
+    #item1{
+
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: baseline;
+    height: 400px;
+    width: 40%;
+    padding: 5%;
+    margin-top: 2%;
+    margin-left: 0%;
+    background-color: #ffff; /* Un gris claro, por ejemplo*/
+    color: rgb(3, 3, 3);
+    border-radius: 10px;
+
+      }
+
+
+      input {
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+      .input-fiels {
+        border: 1px solid #ccc;
+        padding: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        /* Puedes seguir agregando estilos si quieres */
+    }
+
+    .mi-boton {
+
+
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: block; /* Convertir el botón en un bloque para centrarlo */
+    margin: 20px auto; /* Centrar horizontalmente y agregar espacio vertical */
+}
+
+
+
+    /* Estilo de los íconos */
+input[type="text"]::before {
+    content: "\f007"; /* Ícono de usuario de Font Awesome */
+    font-family: "Font Awesome";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+   #item2 {
+
+        order: 2;
+        display:    flex;
+        align-self: baseline;
+        width:  50%;
+        margin-top: 20px;
+        justify-content: center;
+        align-self: center;
+
+        height: 400px;
+        padding: 2em;
+        background-color: #ffff; /* Un gris claro, */
+        color: rgb(3, 3, 3);
+        border-radius: 5%;
+        overflow: hidden; /* Oculta el desbordamiento*/
+
+      }
+
+   .scrollable-content {
+    height: 100%; /* Asegúrate de que ocupe todo el espacio disponible */
+    overflow: auto; /* Agrega barras de desplazamiento si es necesario */
+  }
+
+
+/* Estilos para la barra deslizable */
+.scrollable-content::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra deslizable */
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la pista */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888; /* Color de fondo del control deslizable */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color de fondo del control deslizable al pasar el mouse */
+
+}
+
+#informacion {
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+#informacion p {
+    margin: 0 0 5px; /* Ajusta el espacio entre párrafos */
+}
+
+/* Estilo específico para la primera fila*/
+#informacion p:nth-child(1) {
+    font-weight: bold;
+    color: rgb(80, 68, 252); /* Cambia el color si lo deseas */
+}
+
+/* Estilo específico para el precio */
+#informacion p:nth-child(2) {
+    font-weight: bold;
+    color: green; /* Cambia el color si lo deseas */
+}
