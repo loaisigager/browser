@@ -55,6 +55,7 @@ class BuscadorController extends Controller
 
         // Retorna una vista con los resultados o sin ellos si no hay filtros
         return view('buscar', compact('inmuebles', 'tiposDisponibles'));
+    
     }
 
     // Función para autocompletar para ciudades
