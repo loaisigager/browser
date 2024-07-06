@@ -13,7 +13,7 @@ class BuscadorController extends Controller
     {
         // Valida que los datos existan
         $request->validate([
-            'Ciudad' => 'nullable|string',
+            'Ciudad' => 'nullable|string',// otra restriccion para que sean solo letras del abecedario seria 'required|alpha'
             'Tipo' => 'nullable|string',
             'Precio' => 'nullable|string|regex:/^\d+;\d+$/', // Asegura que el precio tenga el formato correcto
         ]);
@@ -55,7 +55,7 @@ class BuscadorController extends Controller
 
         // Retorna una vista con los resultados o sin ellos si no hay filtros
         return view('buscar', compact('inmuebles', 'tiposDisponibles'));
-    
+
     }
 
     // Función para autocompletar para ciudades
