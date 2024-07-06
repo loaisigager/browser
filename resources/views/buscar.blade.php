@@ -91,25 +91,7 @@
                 $('#item2').css('display', 'flex');
             });
         </script>
-        <script>
-            document.getElementById('Formulario').addEventListener('submit', function (event) {
-                const ciudadInput = document.getElementById('Ciudad');
-                const tipoInput = document.getElementById('Tipo');
-
-                if (!esAlfabetico(ciudadInput.value)) {
-                    alert('El campo "Ciudad" debe contener solo letras.');
-                    event.preventDefault(); // Evita enviar el formulario
-                }
-
-                 });
-
-            function esAlfabetico(valor) {
-                return /^[a-zA-Z]+$/.test(valor);
-            }
-        </script>
-
-
-     <!--Mostrar Resultados-->
+         <!--Mostrar Resultados-->
       <div id="item2"> <!-- Segundo Child Flex Container -->
         <div class="scrollable-content">
         <h2>Resultados</h2>
