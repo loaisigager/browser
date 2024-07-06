@@ -22,7 +22,7 @@
     <div class="container"><!--Inicio de Flex Container Parent se trabaja en el archivo carpeta public CSS Style-->
        <div id="item1">  <!--Primer Flex Container Child se trabaja en el archivo CSS Style-->
           <h2 style="text-align: center">Nicaragua RealState</h2>
-          <form method="GET" action="{{ route('buscar') }}"><!-- Los datos del formulario se envia al controlador BuscadorController.php a la funcion buscar para su proceso-->
+          <form method="GET" action="{{ route('buscar') }}"><!-- Los datos del formulario se a la ruta Route/buscar que a su vez envia al controlador BuscadorController.php a la funcion buscar para su proceso-->
               @csrf
               <div class="input-field"> <!-- los atributos id y name son importantes para los scripts de autocompletado y ion.slider-->
               <label for="Ciudad">Ciudad:</label>
