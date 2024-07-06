@@ -19,7 +19,7 @@ class BuscadorController extends Controller
         ]);
 
         // Inicializa la variable de inmuebles como un paginador vacío
-        $inmuebles = Inmueble::query()->whereRaw('1 = 0');
+        $inmuebles = Inmueble::query()->whereRaw('1 = 0')->paginate(5);
 
         $tiposDisponibles = [];
 
