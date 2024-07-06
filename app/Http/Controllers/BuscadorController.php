@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Inmueble;
+use Illuminate\Support\Facades\Validator;
 
 
 class BuscadorController extends Controller
@@ -17,6 +18,13 @@ class BuscadorController extends Controller
             'Tipo' => 'nullable|string|regex:/^[A-Za-z\s]+$/',
             'Precio' => 'nullable|string|regex:/^\d+;\d+$/', // Asegura que el precio tenga el formato correcto
         ]);
+
+
+    if ($validator->fails()) {
+        // Maneja los errores aquí (por ejemplo, envía una respuesta JSON con los errores)
+        return response()->json(['errors' => $validator->errors()], 422);
+    }
+
 
         // Inicializa la variable de inmuebles como un paginador vacío
         $inmuebles = Inmueble::query()->whereRaw('1 = 0')->paginate(5);
