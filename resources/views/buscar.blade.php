@@ -91,6 +91,26 @@
                 $('#item2').css('display', 'flex');
             });
         </script>
+        <script>
+            document.getElementById('miFormulario').addEventListener('submit', function (event) {
+                const ciudadInput = document.getElementById('ciudadInput');
+                const tipoInput = document.getElementById('tipoInput');
+
+                if (!esAlfabetico(ciudadInput.value)) {
+                    alert('El campo "Ciudad" debe contener solo letras.');
+                    event.preventDefault(); // Evita enviar el formulario
+                }
+
+                if (!esAlfabetico(tipoInput.value)) {
+                    alert('El campo "Tipo" debe contener solo letras.');
+                    event.preventDefault(); // Evita enviar el formulario
+                }
+            });
+
+            function esAlfabetico(valor) {
+                return /^[a-zA-Z ]+$/.test(valor);
+            }
+        </script>
          <!--Mostrar Resultados-->
       <div id="item2"> <!-- Segundo Child Flex Container -->
         <div class="scrollable-content">
