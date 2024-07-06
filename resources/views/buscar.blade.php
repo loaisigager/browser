@@ -91,7 +91,7 @@
                 $('#item2').css('display', 'flex');
             });
         </script>
-     <!--   <script>
+       <script>
             document.getElementById('Formulario').addEventListener('submit', function (event) {
                 const ciudadInput = document.getElementById('Ciudad');
                 const tipoInput = document.getElementById('Tipo');
@@ -110,7 +110,7 @@
             function esAlfabetico(valor) {
                 return /^[a-zA-Z ]+$/.test(valor);
             }
-        </script> -->
+        </script>
          <!--Mostrar Resultados-->
       <div id="item2"> <!-- Segundo Child Flex Container -->
         <div class="scrollable-content">
