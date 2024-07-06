@@ -19,10 +19,14 @@ class BuscadorController extends Controller
             'Precio' => 'nullable|string|regex:/^\d+;\d+$/', // Asegura que el precio tenga el formato correcto
         ]);
 
-
-    if ($validator->fails()) {
-        // Maneja los errores aquí (por ejemplo, envía una respuesta JSON con los errores)
-        return response()->json(['errors' => $validator->errors()], 422);
+        $validator = Validator::make($request->all(), [
+            'Ciudad' => 'nullable|string|alpha:ascii',
+            'Tipo' => 'nullable|string|regex:/^[A-Za-z\s]+$/',
+            'Precio' => 'nullable|string|regex:/^\d+;\d+$/',
+        ]);
+           if ($validator->fails()) {
+           // Maneja los errores aquí (por ejemplo, envía una respuesta JSON con los errores)
+            return response()->json(['errors' => $validator->errors()], 422);
     }
 
 
