@@ -14,7 +14,7 @@ class BuscadorController extends Controller
         // Valida que los datos existan
         $request->validate([
             'Ciudad' => 'nullable|string|alpha:ascii',// otra restriccion para que sean solo letras del abecedario seria 'required|alpha'
-            'Tipo' => 'nullable|string',
+            'Tipo' => 'nullable|string|regex:/^[A-Za-z\s]+$/',
             'Precio' => 'nullable|string|regex:/^\d+;\d+$/', // Asegura que el precio tenga el formato correcto
         ]);
 
