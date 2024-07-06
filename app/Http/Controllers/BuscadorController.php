@@ -27,7 +27,7 @@ class BuscadorController extends Controller
            if ($validator->fails()) {
            // Maneja los errores aquí (por ejemplo, envía una respuesta JSON con los errores)
             return response()->json(['errors' => $validator->errors()], 422);
-    }
+            }
 
 
         // Inicializa la variable de inmuebles como un paginador vacío
