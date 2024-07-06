@@ -144,7 +144,7 @@
  </div>
         <!-- Como observaran aca es una interaccion entre vista-controlador-ruta es el modelo de Laravel, la logica del back end la tiene el controlador o BuscadorController.php aca-->
 
-        <!-- Vista de errores de validacon-->
+        <!-- Vista de errores de validacion-->
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
