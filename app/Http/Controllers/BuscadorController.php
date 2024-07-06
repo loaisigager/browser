@@ -18,7 +18,7 @@ class BuscadorController extends Controller
             'Tipo' => 'nullable|string|regex:/^[A-Za-z\s]+$/',
             'Precio' => 'nullable|string|regex:/^\d+;\d+$/', // Asegura que el precio tenga el formato correcto
         ]);
-
+        // manejo de errores en la validacion
         $validator = Validator::make($request->all(), [
             'Ciudad' => 'nullable|string|alpha:ascii',
             'Tipo' => 'nullable|string|regex:/^[A-Za-z\s]+$/',
