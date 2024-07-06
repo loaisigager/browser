@@ -22,7 +22,7 @@
     <div class="container"><!--Inicio de Flex Container Parent se trabaja en el archivo carpeta public CSS Style-->
        <div id="item1">  <!--Primer Flex Container Child se trabaja en el archivo CSS Style-->
           <h2 style="text-align: center">Nicaragua RealState</h2>
-          <form  method="GET" action="{{ route('buscar') }}"><!-- Los datos del formulario se a la ruta Route/buscar que a su vez envia al controlador BuscadorController.php a la funcion buscar para su proceso-->
+          <form  id="Formulario" method="GET" action="{{ route('buscar') }}"><!-- Los datos del formulario se a la ruta Route/buscar que a su vez envia al controlador BuscadorController.php a la funcion buscar para su proceso-->
               @csrf
               <div class="input-field"> <!-- los atributos id y name son importantes para los scripts de autocompletado y ion.slider-->
               <label for="Ciudad">Ciudad:</label>
@@ -92,9 +92,9 @@
             });
         </script>
         <script>
-            document.getElementById('miFormulario').addEventListener('submit', function (event) {
-                const ciudadInput = document.getElementById('ciudadInput');
-                const tipoInput = document.getElementById('tipoInput');
+            document.getElementById('Formulario').addEventListener('submit', function (event) {
+                const ciudadInput = document.getElementById('Ciudad');
+                const tipoInput = document.getElementById('Tipo');
 
                 if (!esAlfabetico(ciudadInput.value)) {
                     alert('El campo "Ciudad" debe contener solo letras.');
