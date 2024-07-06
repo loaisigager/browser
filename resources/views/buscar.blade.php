@@ -108,7 +108,7 @@
             });
 
             function esAlfabetico(valor) {
-                return /^[a-zA-Z]+$/.test(valor);
+                return /^[a-zA-Z ]+$/.test(valor);
             }
         </script>
 
