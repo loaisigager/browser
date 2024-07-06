@@ -101,14 +101,10 @@
                     event.preventDefault(); // Evita enviar el formulario
                 }
 
-                if (!esAlfabetico(tipoInput.value)) {
-                    alert('El campo "Tipo" debe contener solo letras.');
-                    event.preventDefault(); // Evita enviar el formulario
-                }
-            });
+                 });
 
             function esAlfabetico(valor) {
-                return /^[a-zA-Z ]+$/.test(valor);
+                return /^[a-zA-Z]+$/.test(valor);
             }
         </script>
 
@@ -117,7 +113,7 @@
       <div id="item2"> <!-- Segundo Child Flex Container -->
         <div class="scrollable-content">
         <h2>Resultados</h2>
-        <p>Se encontraron {{ $inmuebles->count() }} resultados.</p> <!-- $inmuebles es la clase creada en el modelo inmueble.php aca se llama al metodo total de las librerias de Laravel,esto muestra el total de los resultados encontrados-->
+        <p>Se encontraron {{ $inmuebles->total() }} resultados.</p> <!-- $inmuebles es la clase creada en el modelo inmueble.php aca se llama al metodo total de las librerias de Laravel,esto muestra el total de los resultados encontrados-->
         @forelse ($inmuebles as $inmueble)
           <div id="informacion">
           <!-- Muestra la información del inmueble aquí es igual que la descripcion anterior de la clase en el modelo-->

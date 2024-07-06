@@ -46,7 +46,7 @@ class BuscadorController extends Controller
             ->paginate(5);
 
             // Si no se encuentran inmuebles, obtener los tipos disponibles en esa ciudad
-            if ($inmuebles->count() == 0 && $request->filled('Ciudad')) {
+            if ($inmuebles->total() == 0 && $request->filled('Ciudad')) {
                 $tiposDisponibles = Inmueble::where('Ciudad', $ciudad)
                     ->groupBy('Tipo')
                     ->pluck('Tipo');
