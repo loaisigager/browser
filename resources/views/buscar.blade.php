@@ -146,7 +146,7 @@
 
         <!-- Vista de errores de validacion-->
         @if ($errors->any())
-        <div class="alert alert-danger" style="display:flex; flex-direction: row ; justify-content: space-between;">
+        <div class="alert alert-danger" style="display:flex; flex-direction: row ; justify-content: space-around;">
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
