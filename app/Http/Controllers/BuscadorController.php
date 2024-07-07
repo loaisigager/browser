@@ -19,8 +19,6 @@ class BuscadorController extends Controller
             'Precio' => 'nullable|string|regex:/^\d+;\d+$/', // Asegura que el precio tenga el formato correcto
         ]);
 
-
-
         // Inicializa la variable de inmuebles como un paginador vacío
         $inmuebles = Inmueble::query()->whereRaw('1 = 0')->paginate(5);
 
