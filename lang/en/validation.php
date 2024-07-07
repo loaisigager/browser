@@ -173,8 +173,8 @@ return [
     */
 
     'custom' => [
-        'attribute-ciudad' => [
-            'rule-alpha' => 'El campo Ciudad debe contener solo letras, por favor intente nuevamente',
+        'ciudad' => [
+            'alpha' => 'El campo Ciudad debe contener solo letras, por favor intente nuevamente',
         ],
     ],
 
@@ -189,10 +189,6 @@ return [
     |
     */
 
-    'attributes' => [
-    'ciudad' => 'Ciudad',
-
-
-    ],
+    'attributes' => [ ],
 
 ];
