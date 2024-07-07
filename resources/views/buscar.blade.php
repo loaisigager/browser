@@ -154,8 +154,7 @@
             </ul>
             <a href="{{ route('buscar') }}" class="btn btn-warning">Regresar</a>
             </div>
-        </div>
-    @endif
+        @endif
 
 
 
