@@ -191,7 +191,7 @@ return [
 
     'attributes' => [
     'ciudad' => 'Ciudad',
-    'tipo' => 'Tipo',
+    
 
     ],
 
