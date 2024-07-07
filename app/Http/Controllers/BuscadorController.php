@@ -13,21 +13,12 @@ class BuscadorController extends Controller
     public function buscar(Request $request)
     {
         // Valida que los datos existan
-        $request->validate([
+        $validatedData = $request->validate([
             'Ciudad' => 'nullable|string|alpha:ascii',// otra restriccion para que sean solo letras del abecedario seria 'required|alpha'
             'Tipo' => 'nullable|string|regex:/^[A-Za-z\s]+$/',
             'Precio' => 'nullable|string|regex:/^\d+;\d+$/', // Asegura que el precio tenga el formato correcto
         ]);
-        // manejo de errores en la validacion
-        $validator = Validator::make($request->all(), [
-            'Ciudad' => 'nullable|string|alpha:ascii',
-            'Tipo' => 'nullable|string|regex:/^[A-Za-z\s]+$/',
-            'Precio' => 'nullable|string|regex:/^\d+;\d+$/',
-        ]);
-           if ($validator->fails()) {
-           // Maneja los errores aquí (por ejemplo, envía una respuesta JSON con los errores)
-            return response()->json(['errors' => $validator->errors()], 422);
-            }
+
 
 
         // Inicializa la variable de inmuebles como un paginador vacío
