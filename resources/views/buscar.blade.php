@@ -146,14 +146,15 @@
 
         <!-- Vista de errores de validacion-->
 @if ($errors->any())
-    <div class="alert alert-danger">
+    <div class="alert alert-danger" >
 
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
+            <a href="{{ route('buscar') }}" class="btn btn-warning ">Limpiar</a>
         </ul>
-        <a href="{{ route('buscar') }}" class="btn btn-warning ">Limpiar</a>
+        
     </div>
 @endif
 
