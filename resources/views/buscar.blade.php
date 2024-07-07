@@ -145,18 +145,20 @@
         <!-- Como observaran aca es una interaccion entre vista-controlador-ruta es el modelo de Laravel, la logica del back end la tiene el controlador o BuscadorController.php aca-->
 
         <!-- Vista de errores de validacion-->
-@if ($errors->any())
-    <div class="alert alert-danger" >
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            <div style="display: flex; align-items: center;"> <!-- Contenedor con alineación vertical centrada -->
+                <span style="flex-grow: 1;"> </span> <!-- Espacio flexible para alinear el botón a la derecha -->
+                <a href="{{ route('buscar') }}" class="btn btn-warning">Limpiar</a>
+            </div>
+        </div>
+    @endif
 
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-            <a href="{{ route('buscar') }}" class="btn btn-warning ">Limpiar</a>
-        </ul>
-        
-    </div>
-@endif
 
 
  </body>
