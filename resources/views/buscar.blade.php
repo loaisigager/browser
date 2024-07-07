@@ -153,7 +153,7 @@
                 @endforeach
             </ul>
             <div style="display: flex; align-items: center;"> <!-- Contenedor con alineación vertical centrada -->
-                <span style="flex-grow: 1;"> </span> <!-- Espacio flexible para alinear el botón a la derecha -->
+                <span style="flex-grow: 1;">&nbsp;</span> <!-- Espacio flexible para alinear el botón a la derecha -->
                 <a href="{{ route('buscar') }}" class="btn btn-warning">Limpiar</a>
             </div>
         </div>
