@@ -152,7 +152,7 @@
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
-            <a href="{{ route('buscar') }}" class="btn btn-sucess">Regresar</a>
+            <a href="{{ route('buscar') }}" class="btn btn-success">Regresar</a>
             </div>
         @endif
  </body>
