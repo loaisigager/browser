@@ -91,7 +91,7 @@
                 $('#item2').css('display', 'flex');
             });
         </script>
-      <!-- <<script>
+      <script>
             document.getElementById('Formulario').addEventListener('submit', function (event) {
                 const ciudadInput = document.getElementById('Ciudad');
                 const tipoInput = document.getElementById('Tipo');
@@ -110,7 +110,7 @@
             function esAlfabetico(valor) {
                 return /^[a-zA-Z ]+$/.test(valor);
             }
-        </script>-->
+        </script>
          <!--Mostrar Resultados-->
       <div id="item2"> <!-- Segundo Child Flex Container -->
         <div class="scrollable-content">
@@ -142,8 +142,7 @@
        </div>
        </div>
  </div>
-        <!-- Como observaran aca es una interaccion entre vista-controlador-ruta es el modelo de Laravel, la logica del back end la tiene el controlador o BuscadorController.php aca-->
-
+        <!-- Como observaran aca es una interaccion entre vista-controlador-modelo es el modelo de Laravel, la logica del back end la tiene el controlador o BuscadorController.php aca-->
         <!-- Vista de errores de validacion-->
         @if ($errors->any())
         <div class="alert alert-danger" style="display:flex; flex-direction: row ; justify-content: space-around;  align-items: baseline;">
