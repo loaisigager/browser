@@ -147,6 +147,7 @@
         <!-- Vista de errores de validacion-->
         @if ($errors->any())
         <div class="alert alert-danger" style="display:flex; flex-direction: row ; justify-content: space-around;  align-items: baseline;">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
