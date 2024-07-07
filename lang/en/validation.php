@@ -18,7 +18,7 @@ return [
     'active_url' => 'The :attribute field must be a valid URL.',
     'after' => 'The :attribute field must be a date after :date.',
     'after_or_equal' => 'The :attribute field must be a date after or equal to :date.',
-    'alpha' => 'El campo :attribute  debe contener solo letras, por favor intente de nuevo.',
+    'alpha' => 'El campo Ciudad  debe contener solo letras, por favor intente de nuevo.',
     'alpha_dash' => 'The :attribute field must only contain letters, numbers, dashes, and underscores.',
     'alpha_num' => 'The :attribute field must only contain letters and numbers.',
     'array' => 'The :attribute field must be an array.',
