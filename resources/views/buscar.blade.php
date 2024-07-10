@@ -148,7 +148,7 @@
         <div class="alert alert-danger" style="display:flex; flex-direction: row ; justify-content: space-around;  align-items: baseline;">
              <ul>
                 @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                    <li>✋​⚠️​{{ $error }}✋​⚠️​</li>
                 @endforeach
             </ul>
             <a href="{{ route('buscar') }}" class="btn btn-success">Regresar Al Filtro</a>
