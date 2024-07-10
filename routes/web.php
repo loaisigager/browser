@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BuscadorController;
+use Illuminate\Support\Facades\DB;
+
 
 
 
@@ -13,11 +15,15 @@ Route::get('/autocomplete-tipo', [BuscadorController::class, 'autocompleteTipo']
 
 
 /////ruta para ver tablas luego se elimina
-use Illuminate\Support\Facades\DB;
+
 
 Route::get('/vertablas', function () {
-    $tablas = DB::select('SHOW TABLES');
-    return view('vertablas', compact('tablas'));
+
+$tablas = DB::select("SELECT name FROM sqlite_master WHERE type='table'");
+foreach ($tablas as $tabla) {
+    echo $tabla->name . "\n";
+}
+
 });
 
 
