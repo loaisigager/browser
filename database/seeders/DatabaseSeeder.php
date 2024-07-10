@@ -2,22 +2,21 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
+
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        DB::table('halagos')->insert([
+            'Ciudad' => 'Boaco',
+            'Halagos'=> '¡¡¡ La Ciudad de Dos Pisos',
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
         ]);
     }
 }
