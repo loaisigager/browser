@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Inmueble;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 
 class BuscadorController extends Controller
@@ -56,7 +57,7 @@ class BuscadorController extends Controller
             }
         }
         // Agregar los halagos de las ciudades correspondientes
-        $inmuebles->load('soul'); 
+        $inmuebles->load('halago');
 
 
         // Retorna una vista con los resultados o sin ellos si no hay filtros
