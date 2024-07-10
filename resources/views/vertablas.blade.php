@@ -1,3 +1,3 @@
 @foreach ($tablas as $tabla)
-    {{ $tabla->Tables_in_tu_base_de_datos }}
+    {{ $tabla->Tables_in_database.sqlite }}
 @endforeach
