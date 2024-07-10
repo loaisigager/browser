@@ -23,7 +23,7 @@ $tablas = DB::select("SELECT name FROM sqlite_master WHERE type='table'");
 foreach ($tablas as $tabla) {
     echo $tabla->name . "\n";
 }
-$nombreTabla = 'inmuebles'; // Reemplaza con el nombre real de tu tabla
+$nombreTabla = 'halagos'; // Reemplaza con el nombre real de tu tabla
 $columnas = DB::select("PRAGMA table_info($nombreTabla)");
 
 foreach ($columnas as $columna) {
