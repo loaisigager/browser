@@ -15,7 +15,7 @@ Route::get('/autocomplete-tipo', [BuscadorController::class, 'autocompleteTipo']
 /////ruta para ver tablas luego se elimina
 use Illuminate\Support\Facades\DB;
 
-Route::get('/ver-tablas', function () {
+Route::get('/vertablas', function () {
     $tablas = DB::select('SHOW TABLES');
     return view('vertablas', compact('tablas'));
 });
