@@ -119,7 +119,7 @@
         @forelse ($inmuebles as $inmueble)
           <div id="informacion">
           <!-- Muestra la información del inmueble aquí es igual que la descripcion anterior de la clase en el modelo-->
-          <p>{{ $inmueble->Tipo }} - {{ $inmueble->Direccion }}</p>
+          <p>💥​💥​{{ $inmueble->Tipo }} - {{ $inmueble->Direccion }}</p>
           <p>Precio: ${{ $inmueble->Precio }};Modo de Pago: {{ $inmueble->MododePago }} </p>
           <p>Teléfono: {{ $inmueble->Telefono }}</p>
          </div>
