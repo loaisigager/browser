@@ -46,6 +46,8 @@ class BuscadorController extends Controller
             })
             ->paginate(5);
 
+
+
             // Si no se encuentran inmuebles, obtener los tipos disponibles en esa ciudad
             if ($inmuebles->total() == 0 && $request->filled('Ciudad')) {
                 $tiposDisponibles = Inmueble::where('Ciudad', $ciudad)
@@ -53,6 +55,9 @@ class BuscadorController extends Controller
                     ->pluck('Tipo');
             }
         }
+        // Agregar los halagos de las ciudades correspondientes
+        $inmuebles->load('soul'); 
+
 
         // Retorna una vista con los resultados o sin ellos si no hay filtros
         return view('buscar', compact('inmuebles', 'tiposDisponibles'));
