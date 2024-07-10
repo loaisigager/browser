@@ -1,6 +1,6 @@
 @foreach ($tablas as $tabla)
 
-{{ $tabla }}
+   {{ $tabla }}
 
 
 @endforeach
