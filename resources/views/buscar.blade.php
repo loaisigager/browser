@@ -120,6 +120,7 @@
           <div id="informacion">
           <!-- Muestra la información del inmueble aquí es igual que la descripcion anterior de la clase en el modelo-->
           <p>💥​💥​{{ $inmueble->Tipo }} - {{ $inmueble->Direccion }}</p>
+          <p>Ciudad: {{ $inmueble->Ciudad }} - Halago: {{ $inmueble->soul->Halago ?? 'No disponible' }}</p>
           <p>Precio: ${{ $inmueble->Precio }};Modo de Pago: {{ $inmueble->MododePago }} </p>
           <p>Teléfono: {{ $inmueble->Telefono }}</p>
          </div>
