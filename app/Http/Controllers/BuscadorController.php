@@ -64,7 +64,13 @@ class BuscadorController extends Controller
         return view('buscar', compact('inmuebles', 'tiposDisponibles'));
 
     }
+    // Funcion para llamar a halago
+    public function index()
+    {
+        $inmuebles = Inmueble::with('halago')->get();
 
+        return view('inmuebles.index', compact('inmuebles'));
+    }
     // Función para autocompletar para ciudades
     public function autocompleteCiudad(Request $request)
     {
