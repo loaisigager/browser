@@ -122,6 +122,7 @@
           <p>💥​💥​{{ $inmueble->Tipo }} - {{ $inmueble->Direccion }}</p>
           <p>Precio: ${{ $inmueble->Precio }};Modo de Pago: {{ $inmueble->MododePago }} </p>
           <p>Teléfono: {{ $inmueble->Telefono }}</p>
+          <p>Halago: {{ $inmueble->halago->Halago ?? 'No hay halago disponible' }}</p>
          </div>
          <!--Manejo de opcion de resultados vacios o cuando ciudad no tiene el tipo escogido de tipo-->
         @empty
