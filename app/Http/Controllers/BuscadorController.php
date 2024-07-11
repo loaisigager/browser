@@ -21,7 +21,9 @@ class BuscadorController extends Controller
         ]);
 
         // Inicializa la variable de inmuebles como un paginador vacío
-        $inmuebles = Inmueble::query()->whereRaw('1 = 0')->paginate(5);
+       // $inmuebles = Inmueble::query()->whereRaw('1 = 0')->paginate(5);
+
+        $inmuebles = Inmueble::with('halago')->whereRaw('1 = 0')->paginate(5);
 
         $tiposDisponibles = [];
 
@@ -36,7 +38,8 @@ class BuscadorController extends Controller
             list($precioMin, $precioMax) = $precio ? explode(';', $precio) : [0, PHP_INT_MAX];
 
             // Realiza la consulta con los filtros aplicados
-            $inmuebles = Inmueble::when($ciudad, function ($query) use ($ciudad) {
+            $inmuebles = Inmueble::with ('halago')
+            -> when($ciudad, function ($query) use ($ciudad) {
                 return $query->where('Ciudad', $ciudad);
             })
             ->when($tipo, function ($query) use ($tipo) {
@@ -56,18 +59,12 @@ class BuscadorController extends Controller
                     ->pluck('Tipo');
             }
         }
-        
+
         // Retorna una vista con los resultados o sin ellos si no hay filtros
         return view('buscar', compact('inmuebles', 'tiposDisponibles'));
 
     }
-    // Funcion para llamar a halago
-    public function index()
-    {
-        $inmuebles = Inmueble::with('halago')->get();
-
-        return view('inmuebles.index', compact('inmuebles'));
-    }
+    
     // Función para autocompletar para ciudades
     public function autocompleteCiudad(Request $request)
     {
