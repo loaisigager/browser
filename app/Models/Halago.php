@@ -15,6 +15,11 @@ class Halago extends Model
 
     // Opcional: si tu tabla no tiene timestamps
     public $timestamps = false;
+
+    public function inmuebles()
+    {
+        return $this->hasMany(Inmueble::class, 'Ciudad', 'Ciudad');
+    }
 }
 
 

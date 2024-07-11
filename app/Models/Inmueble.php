@@ -21,9 +21,9 @@ class Inmueble extends Model
     // Si tienes timestamps (created_at, updated_at), y si no los usas, desactívalos
     public $timestamps = false;
 
-    public function halago(): HasOne
+    public function halago()
     {
-        return $this->hasOne(Halago::class, 'Ciudad', 'Ciudad');
+        return $this->belongsTo(Halago::class, 'Ciudad', 'Ciudad');
     }
 
 
