@@ -5,6 +5,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 
 class Inmueble extends Model
@@ -20,7 +21,7 @@ class Inmueble extends Model
     // Si tienes timestamps (created_at, updated_at), y si no los usas, desactívalos
     public $timestamps = false;
 
-    public function halago()
+    public function halago(): HasOne
     {
         return $this->hasOne(Halago::class, 'Ciudad', 'Ciudad');
     }
