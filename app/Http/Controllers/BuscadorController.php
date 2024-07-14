@@ -64,7 +64,7 @@ class BuscadorController extends Controller
         return view('buscar', compact('inmuebles', 'tiposDisponibles'));
 
     }
-    
+
     // Función para autocompletar para ciudades
     public function autocompleteCiudad(Request $request)
     {
